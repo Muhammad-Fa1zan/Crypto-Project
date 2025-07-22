@@ -28,6 +28,13 @@ function PaginationButtons({  setPage }: { setPage: React.Dispatch<React.SetStat
                         >
                             1
                         </PaginationLink>
+                        <PaginationLink
+                            href="#"
+                            className="text-lg px-5 py-3 rounded-lg"
+                            onClick={() => setPage(2)}
+                        >
+                            2
+                        </PaginationLink>
                     </PaginationItem>
                     <PaginationItem>
                         <PaginationEllipsis className="text-lg" />

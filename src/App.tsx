@@ -4,6 +4,7 @@ import Navbar from "./pages/Navbar";
 // import ModeToggle from "./Context-theme/ModeToggle";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
+import ModeToggle from "./Context-theme/ModeToggle";
 
 
 function App() {
@@ -11,16 +12,16 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<QueryGet />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        {/* <ModeToggle /> */}
-      </ThemeProvider>
-    </BrowserRouter>    
+      <BrowserRouter>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<QueryGet />} />
+            <Route path="/login" element={<Login />} />
+          </Routes> 
+          <ModeToggle />
+        </ThemeProvider>
+      </BrowserRouter>
     </>
   )
 }
